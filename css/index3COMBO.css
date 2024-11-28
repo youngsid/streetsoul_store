@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* messenger */
+    margin: 0;
+    padding: 0;
+}
+
+.bestseller {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F3F3F3;
+    color: #fff;
+    padding: 1em;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.search-cart input {
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.cart-icon img {
+    max-width: 30px;
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    border-radius: 3px;
+    background-color: #F3F3F3;
+    justify-content: center;
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    text-transform: uppercase;
+    display: block;
+}
+
+.menu ul li a:hover {
+    color: black;
+    /* gạch chân */
+    text-decoration: underline gray;
+}
+
+.menu ul ul {
+    display: block;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    box-shadow: 0 0 1px ;
+    border-radius: 3px;
+    visibility: hidden;
+    transition: all 0.1s;
+    top: 150%;
+}
+
+.menu ul ul li a {
+    color: black
+}
+
+.menu ul li:hover>ul {
+    background-color: white;
+    display: block;
+    top: 100%;
+    visibility: visible;
+    margin-right: 20px;
+}
+/* quảng cáo */
+
+.container-QC img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.container-QC img:first-child {
+    display: block;
+}
+/* quảng cáo */
+.main-content {
+    padding: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-item {
+    width: calc(25% - 20px); /* 100% chia 8 sản phẩm, trừ khoảng cách */
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* .product-item a:hover{
+    background-color: pink;
+} */
+/* thương hiệu */
+.thuonghieu {
+    text-align: center;
+}
+
+.img-container  {
+    text-align: center;
+}
+
+.img-container img {
+    width: 200px; /* Đặt kích thước mong muốn */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    margin: 5px; /* Để lại khoảng trắng giữa các ảnh */
+}
+
+/* icon hỗ trợ / mua hàng */
+.footer-head {
+    font-size: 20px;
+    background-color: #F3F3F3;
+    color: black;
+    padding: 20px;
+}
+
+/* messenger */
+.messenger-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.messenger-icon img {
+    width: 80%; /* Adjust the size of the logo as needed */
+    height: auto;
+    border-radius: 50%;
+}
+
+.messenger-icon:hover {
+    background-color: #1E90FF;
+}
+.icon {
+    font-size: 25px;
+    margin-right: 2px;
+}
+
+
+/* footer */
+.footer-body {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    flex: 1;
+    padding: 0 20px;
+}
+/* footer-left */
+.column.left {
+    text-align: left;
+}
+/* footer-center */
+.column.center {
+    text-align: center;
+}
+/* footer-right */
+.column.right {
+    text-align: right;
+}
+.column.right a:hover{
+    background-color: pink;
+    text-decoration: underline;
+}
+.column h3 {
+    color: black;
+}
+/* 3 icon fb, yt, ins */
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px; /* Tùy chỉnh kích thước của logo */
+    height: auto;
+}
+/* cần thêm hover cho icon fb,ins,yt */
+.social-icons a:hover{
+    background-color: pink;
+}
+
+.footer-final{
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+/* footer */
