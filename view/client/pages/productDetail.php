@@ -13,7 +13,7 @@
             <br />
             <div class="box-product-deltail-body-price">
                 <p class="text-red-500 text-xl font-semibold  mb-2">Giá : <?= formatCurrency($product['price']) ?></p>
-                <span>Áo dc sản xuất tại Việt nam</span>
+                <span>Áo được sản xuất tại Việt nam</span>
             </div>
 
             <!-- form xử lí color và size -->
