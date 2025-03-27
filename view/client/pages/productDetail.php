@@ -4,7 +4,6 @@
         <div class="col-7 box-product-deltail-img">
             <img src="./uploads/<?= $product['image'] ?>" alt="" />
         </div>
-
         <!-- product detail  -->
         <div class="col-4 box-product-deltail-body">
             <div class="box-product-deltail-body-title">
@@ -15,18 +14,14 @@
                 <p class="text-red-500 text-xl font-semibold  mb-2">Giá : <?= formatCurrency($product['price']) ?></p>
                 <span>Áo được sản xuất tại Việt nam</span>
             </div>
-
             <!-- form xử lí color và size -->
             <form action="" method="post" class="needs-validation" novalidate>
                 <br />
-
                 <div class="box-product-deltail-body-color">
                     <p>Color :</p>
                     <div class="box-product-deltail-body-color-list">
-
                         <?php
                         foreach ($listColor as $color) {
-
                         ?>
                             <div>
                                 <input
@@ -39,11 +34,8 @@
                                 <label for="product-color-<?= $color['id'] ?>" style="background-color: <?= $color['code'] ?>;"> </label>
                             </div>
                         <?php
-
                         }
                         ?>
-
-
                     </div>
                 </div>
                 <br />

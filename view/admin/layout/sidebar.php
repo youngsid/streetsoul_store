@@ -88,14 +88,11 @@
                             <i class="fa-solid fa-palette"></i> Màu
                         </button>
                     </a>
-
                 </div>
-
                 <a
                     class="btn btn-danger btn-sm logout"
                     style="width: 100%"
                     href="index.php?page=logout"><i class="fa-solid fa-arrow-right-to-bracket"></i> Đăng xuất</a>
-
             </div>
         </div>
         <div class="box-content">

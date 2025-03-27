@@ -16,50 +16,30 @@
         </tr>
       </thead>
       <tbody>
-
-        <?php
-        foreach ($listData as $index => $item) {
-        ?>
+        <?php foreach ($listData as $index => $item): ?>
           <tr>
-            <th scope="row"><?= $index ?></th>
-            <td><?= $item['name'] ?></td>
-            <td><?= formatCurrency($item['totalMoney']) ?></td>
-            <td><?= $item['isPay'] == 0 ? formatCurrency($item['totalMoney']) : '0đ' ?></td>
-            <td><?= $item['phone'] ?></td>
-            <td><?= $item['address'] ?></td>
-            <td><?= $item['createdAt'] ?></td>
+            <th scope="row"> <?= $index + 1 ?> </th>
+            <td> <?= htmlspecialchars($item['name']) ?> </td>
+            <td> <?= formatCurrency($item['totalMoney']) ?> </td>
+            <td> <?= $item['isPay'] ? '0đ' : formatCurrency($item['totalMoney']) ?> </td>
+            <td> <?= htmlspecialchars($item['phone']) ?> </td>
+            <td> <?= htmlspecialchars($item['address']) ?> </td>
+            <td> <?= htmlspecialchars($item['createdAt']) ?> </td>
             <td>
-              <a href="index.php?layout=admin&page=orderDetail&id=<?= $item['id'] ?>">
-
-                <button class="btn btn-outline-primary btn-sm">
-                  Chi tiết
-                </button>
+              <a href="index.php?layout=admin&page=orderDetail&id=<?= urlencode($item['id']) ?>">
+                <button class="btn btn-outline-primary btn-sm">Chi tiết</button>
               </a>
             </td>
             <td>
               <form action="" method="post">
-                <button class="btn btn-outline-success btn-sm" name="btn-ship-order" value="<?= $item['id'] ?>">
+                <button class="btn btn-outline-success btn-sm" name="btn-ship-order" value="<?= htmlspecialchars($item['id']) ?>">
                   Giao hàng
                 </button>
               </form>
             </td>
           </tr>
-        <?php
-        }
-        ?>
+        <?php endforeach; ?>
       </tbody>
     </table>
   </div>
 </div>
-
-<?php
-// if(isset($_POST['btn-ship-order'])) {
-//   $idorder = $_POST['btn-ship-order'];
-
-//   $result  = updateStatusOrder($idorder,1);
-
-//   if($result) {
-//     echo "<script>window.location = '/duan1_Nike/index.php?layout=dashboard&act=orderNew'</script>";
-//   }
-// }
-?>

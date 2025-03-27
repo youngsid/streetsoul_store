@@ -11,7 +11,7 @@ class ProductController
         $this->model = new ProductModel();
         $this->category = new CategoryModel();
     }
-
+// hiển thị danh sách sp->nếu ad xóa -> chuyển vào danh sách đã xóa
     public function index()
     {
         if (isset($_POST['btn-product-delete'])) {
@@ -22,7 +22,7 @@ class ProductController
         $listData = $this->model->listAll(0);
         include 'view/admin/pages/product.php';
     }
-
+// hiển thị danh sách sp
     public function indexDelete()
     {
         if (isset($_POST['btn-product-delete'])) {

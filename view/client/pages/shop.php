@@ -9,7 +9,6 @@
                 class="w-full h-10 flex items-center hover:bg-gray-100 cursor-pointer px-2 <?= isset($_GET['cate']) && $_GET['cate'] == $cate['id'] ? "bg-blue-100 text-blue-500" : "" ?>">
                 <?= $cate['name'] ?>
             </a>
-
         <?php
         }
         ?>
@@ -29,8 +28,6 @@
             <?php
             }
             ?>
-
-
         </div>
     </div>
 </div>

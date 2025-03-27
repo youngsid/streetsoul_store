@@ -1,4 +1,5 @@
 <?php
+// index.php
 session_start();
 ?>
 <?php
@@ -7,7 +8,7 @@ $_SESSION["favcolor"] = "green";
 
 $session_status = session_status();
 
-
+// kết nối dữ liệu
 include "./config/db.php";
 include "./config/func.php";
 include "./config/momo.php";
@@ -23,15 +24,17 @@ include "./controller/product.controller.php";
 include "./controller/productDetail.controller.php";
 include "./controller/cart.controller.php";
 include "./controller/order.controller.php";
-$db = new Database();
+// tạo kết nối cơ sở dữ liệu bằng database;
+$db = new Database(); 
 $db->pdo_get_connection();
-
-
+// kết nối dữ liệu
+// index.php
 $sessionUserId = null;
 if (isset($_SESSION['user'])) {
     $sessionUserId = $_SESSION['user'];
 }
-
+// xử lý layout và điều hướng
+// layout xử lý giao diện admin or client
 $layout = $_GET['layout'] ?? '';
 $page = $_GET['page'] ?? '';
 
@@ -51,7 +54,6 @@ switch ($layout) {
                 $contactController = new ContactController();
                 $contactController->index();
                 break;
-
             case 'productDetail':
                 $productDetail = new ProductDetailController();
                 $productDetail->index();

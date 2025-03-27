@@ -25,8 +25,10 @@
                 <div class="box-cart-left-title">Giỏ hàng</div>
                 <div class="box-cart-left-list">
                     <!-- <?php
+                            $totalMoney = 0;
                             foreach ($listData as $key => $value) {
                                 $totalMoney += (int)$value['price'] * $value['quantity'];
+                                
                             ?> -->
                     <div class="box-cart-left-item">
                         <div class="box-cart-left-item-img size-20">
@@ -59,7 +61,7 @@
         <div class="box-cart-right order">
             <div class="box-cart-right-title">Đơn hàng</div>
             <div class="box-cart-right-box">
-                <div class="box-cart-right-text">
+            <div class="box-cart-right-text">
                     <p>Giá tiền</p>
                     <span id="box-cart-right-text-price"><?= formatCurrency($totalMoney) ?></span>
                 </div>
@@ -73,10 +75,10 @@
                         <input type="radio" name="pay-buy" id="pay-select-home" checked value="0" />
                         Thanh toán khi nhận hàng
                     </label>
-                    <label for="pay-select-bank">
+                    <!-- <label for="pay-select-bank">
                         <input type="radio" name="pay-buy" id="pay-select-bank" value="1" />
                         Thanh toán tài khoản
-                    </label>
+                    </label> -->
                 </div>
                 <div class="box-cart-right-total">
                     <p>Tổng tiền:</p>
@@ -169,7 +171,6 @@
                     </form>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
