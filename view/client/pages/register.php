@@ -15,7 +15,7 @@
             <label for="">Mật khẩu</label>
             <input type="password" name="password" class="w-full py-2 px-2 border rounded-md my-1" required>
 
-            <button type="submit" class="btn btn-primary mt-2">Đăng nhập</button>
+            <button type="submit" class="btn btn-primary mt-2">Đăng ký</button>
         </form>
 
         <div class="border-t mt-4 py-2">

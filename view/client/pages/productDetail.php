@@ -1,8 +1,8 @@
-<div class="box-content ">
+<div class="box-content">
     <div class="box-product-deltail row">
         <!-- product img -->
         <div class="col-7 box-product-deltail-img">
-            <img src="./uploads/<?= $product['image'] ?>" alt="" />
+            <img id="productImage" src="./uploads/<?= $product['image'] ?>" alt="Product Image" />
         </div>
         <!-- product detail  -->
         <div class="col-4 box-product-deltail-body">
@@ -28,9 +28,10 @@
                                     type="radio"
                                     name="color"
                                     id="product-color-<?= $color['id'] ?>"
-                                    class="form-check-input"
+                                    class="form-check-input color-option"
                                     required
-                                    value="<?= $color['id'] ?>" />
+                                    value="<?= $color['id'] ?>"
+                                    data-image="<?= $color['image'] ?>" />
                                 <label for="product-color-<?= $color['id'] ?>" style="background-color: <?= $color['code'] ?>;"> </label>
                             </div>
                         <?php
@@ -58,12 +59,12 @@
         <div class="col-12">
             <div class="box-product-category-other">
                 <h5 class="text-center py-4">Các sản phẩm khác</h5>
-                <div class=" grid grid-cols-5 gap-4">
+                <div class="grid grid-cols-5 gap-4">
                     <?php
                     foreach ($listOther as $index => $data) {
                     ?>
                         <a href="index.php?page=productDetail&id=<?= $data['id'] ?>" class="group">
-                            <img src="./uploads/<?= $data['image'] ?>" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+                            <img src="./uploads/<?= $data['image'] ?>" alt="Product" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
                             <h3 class="mt-4 text-sm text-gray-700"><?= $data['name'] ?></h3>
                             <p class="mt-1 text-lg font-medium text-gray-900"><?= formatCurrency($data['price']) ?></p>
                         </a>
@@ -74,3 +75,22 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- JavaScript để thay đổi ảnh -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Lấy danh sách các input radio màu
+        const colorOptions = document.querySelectorAll(".color-option");
+
+        colorOptions.forEach(option => {
+            option.addEventListener("change", function () {
+                // Lấy đường dẫn ảnh từ data-image
+                const newImage = this.getAttribute("data-image");
+                
+                // Thay đổi ảnh sản phẩm
+                document.getElementById("productImage").src = "./uploads/" + newImage;
+            });
+        });
+    });
+</script>

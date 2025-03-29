@@ -55,12 +55,13 @@
     </script>
 
     <header>
-
+        
         <div class="container">
             <nav>
                 <a href="index.php">
                     <div class="logo">
-                        <img src="img/logofivemenxoaphong.png" alt="" width="100px">
+                        <!-- <img src="img/logofivemenxoaphong.png" alt="" width="100px"> -->
+                        <h1>Đây là logo</h1>
                     </div>
                 </a>
 
