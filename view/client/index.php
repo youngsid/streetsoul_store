@@ -13,3 +13,4 @@ $allowed_pages = [
 include 'view/client/layout/header.php';
 include $allowed_pages[$page] ?? 'view/client/pages/home.php';
 include 'view/client/layout/footer.php';
+// hello ae
