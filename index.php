@@ -11,7 +11,6 @@ $session_status = session_status();
 // kết nối dữ liệu
 include "./config/db.php";
 include "./config/func.php";
-include "./config/momo.php";
 include "./model/order.model.php";
 include "./controller/home.controller.php";
 include "./controller/shop.controller.php";

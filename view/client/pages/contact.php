@@ -28,5 +28,5 @@
     <?php endforeach; ?>
     
     <p class="font-bold">0933 800 190 - 1900252557</p>
-    <p>csteamdcs@gmail.com</p>
+    <p>streetsoul_store@gmail.com</p>
 </section>
