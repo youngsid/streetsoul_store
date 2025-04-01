@@ -64,9 +64,7 @@
             <div class="box-form-image-img">
                 <img src="./uploads/<?= $dataPro['image'] ?>" alt="" id="imageProduct" class="size-20 mt-1" />
             </div>
-           
         </div>
-
         <div class="col-md-6">
             <label for="validationCustom010" class="form-label">Mô tả</label>
             <textarea
@@ -75,10 +73,8 @@
                 class="form-control"
                 required
                 value=""></textarea>
-
             <div class="invalid-feedback">Vui lòng nhập mô tả.</div>
         </div>
-
         <div class="col-12">
             <button class="btn btn-primary" type="submit" id="btn-submit" name="btn-product-post">Thêm</button>
         </div>

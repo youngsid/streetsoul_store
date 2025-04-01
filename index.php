@@ -168,5 +168,3 @@ switch ($layout) {
                 break;
         }
 }
-
-// hello anh em, code mới nè

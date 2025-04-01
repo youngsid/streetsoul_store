@@ -3,7 +3,6 @@
         <div class="box-cart-left">
             <div class="box-cart-left-adress">
                 <div class="box-cart-left-title">Thông tin</div>
-
                 <form>
                     <div class="flex gap-3">
                         <div class="col">
@@ -52,12 +51,9 @@
                     <!-- <?php
                             }
                             ?> -->
-
-
                 </div>
             </div>
         </div>
-
         <div class="box-cart-right order">
             <div class="box-cart-right-title">Đơn hàng</div>
             <div class="box-cart-right-box">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>StreetSoul Store</title>
 
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -60,8 +60,7 @@
             <nav>
                 <a href="index.php">
                     <div class="logo">
-                        <!-- <img src="img/logofivemenxoaphong.png" alt="" width="100px"> -->
-                        <h1>Đây là logo</h1>
+                        <img src="/uploads/logov2.png" alt="">
                     </div>
                 </a>
 
@@ -115,11 +114,7 @@
                                         class="dropdown-item"
                                         href="index.php?page=purchases">Đơn hàng</a>
                                 </li>
-                                <!-- <li>
-                                    <a
-                                        class="dropdown-item"
-                                        href="/duan1_Nike/index.php?act=userInfo">Thông tin cá nhân</a>
-                                </li> -->
+
 
                                 <li>
                                     <a
